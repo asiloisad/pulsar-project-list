@@ -1,0 +1,16 @@
+'menu': [
+  {
+    'label': 'Packages'
+    'submenu': [
+      {
+        'label': 'Project List'
+        'submenu': [
+            {'label': 'Toggle' , 'command': 'project-list:toggle'}
+            {'label': 'Recent' , 'command': 'project-list:recent'}
+            {'label': 'Update' , 'command': 'project-list:update'}
+            {'label': 'Edit...', 'command': 'project-list:edit'  }
+        ]
+      }
+    ]
+  }
+]

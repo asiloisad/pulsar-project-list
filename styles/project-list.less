@@ -1,0 +1,44 @@
+@import "ui-variables";
+
+.project-list > span {
+  color: @text-color-subtle;
+  cursor: context-menu;
+}
+
+.project-list .empty-message {
+  color: @text-color-error;
+  margin-top: 10px;
+}
+
+.project-list .error-message {
+  color: @text-color-error;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.project-list .icon {
+  display: block !important;
+}
+
+.project-list .primary-line .tag {
+  color: @syntax-color-constant;
+  margin-right: 5px;
+  border: solid 1px;
+  padding: .2em .4em;
+  border-radius: 4px;
+  vertical-align: baseline;
+}
+
+.project-list .loading-message {
+  display: flex;
+}
+
+.project-list .loading-spinner-tiny {
+  margin-left: 8px;
+}
+
+.project-list .keystroke {
+  border: solid 1px;
+  padding: .2em .4em;
+  border-radius: 4px;
+}

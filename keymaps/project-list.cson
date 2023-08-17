@@ -1,0 +1,9 @@
+'atom-workspace':
+  'f10'    : 'project-list:toggle'
+  'alt-f10': 'project-list:recent'
+
+'.project-list atom-text-editor[mini]':
+  'enter'      : 'select-list:open'
+  'alt-enter'  : 'select-list:swap'
+  'shift-enter': 'select-list:append'
+  'alt-v'      : 'select-list:paste'
