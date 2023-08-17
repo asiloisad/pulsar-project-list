@@ -15,6 +15,12 @@
   </a>
 </p>
 
+![project-list](https://github.com/bacadra/atom-project-list/raw/master/assets/project-list.png)
+
+![recent-list](https://github.com/bacadra/atom-project-list/raw/master/assets/recent-list.png)
+
+The Project list is a window that makes it easier to navigate through projects. The project file is located in the Atom configuration files under the name `project.cson`.
+
 ## Installation
 
 ### Atom Text Editor
@@ -37,11 +43,9 @@ ppm install bacadra/atom-project-list
 
 Alternatively, you can directly install [project-list](https://web.pulsar-edit.dev/packages/project-list) from the Pulsar package store.
 
-## Project list
+## Projects...
 
-![project-list](https://github.com/bacadra/atom-project-files/raw/master/assets/project-list.png)
-
-The Project list is a window that makes it easier to navigate through projects. The project file is located in the Atom configuration files under the name `project.cson`. The file must be a valid `.cson` file. The main file structure consists of a list of objects with the following keys:
+The project file must be a valid `.cson` file. The main file structure consists of a list of objects with the following keys:
 
 * `title`: [string] the name of the project.
 * `paths`: [list of strings] the list of paths that describe the project.
@@ -84,34 +88,20 @@ Here is an example of `project.cson`:
 ]
 ```
 
+## Shortcuts
+
 In the `atom-workspace` space, the following commands are available:
 
-* `project-files:projects-toggle`: (default `F10`) opens the project list.
-* `project-files:projects-edit`: edits the project list in Atom.
-* `project-files:projects-cache`: manually caches the projects.
+* `project-list:toggle`: (default `F10`) opens the project list.
+* `project-list:recent`: (default `Alt-F10`) opens the recent projects.
+* `project-list:update`: manually update the projects list.
+* `project-list:edit`: open the project configuration file.
 
 In the `project-list` view, the following keymap is available:
 
 * `Enter`: opens a new window with the selected project.
 * `Alt-Enter`: closes the active window and opens a new one with the selected project.
-* `Shift-Enter`: appends the selected project to the projects in the active window.
-* `Alt-Q`: changes the query to the project file path of the selected item (does not hide the view).
-* `Alt-S`: changes the query to the selection (does not hide the view).
-
-## Recent list
-
-![recent-list](https://github.com/bacadra/atom-project-files/raw/master/assets/recent-list.png)
-
-In the `atom-workspace` space, the following command is available:
-
-* `project-files:recent-toggle`: (default `Alt+F10`) opens the recent projects.
-
-In the `recent-list` view, the following keymap is available:
-
-* `Enter`: opens a new window with the selected project.
-* `Alt-Enter`: closes the active window and opens a new one with the selected project.
-* `Shift-Enter`: appends the selected project to the projects in the active window.
-* `Alt-S`: changes the query to the selection (does not hide the view).
+* `Shift-Enter`: appends the selected project to the projects in the active window
 
 ## Configuration
 
