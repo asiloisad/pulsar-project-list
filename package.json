@@ -20,13 +20,6 @@
       "project-list:edit"
     ]
   },
-  "consumedServices": {
-    "file-icons.element-icons": {
-      "versions": {
-        "1.0.0": "consumeElementIcons"
-      }
-    }
-  },
   "homepage": "https://github.com/bacadra/atom-project-list",
   "url": "https://github.com/bacadra/atom-project-list",
   "repository": "https://github.com/bacadra/atom-project-list",
