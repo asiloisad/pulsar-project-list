@@ -50,7 +50,7 @@ The project file must be a valid `.cson` file. The main file structure consists 
 * `title`: [string] the name of the project.
 * `paths`: [list of strings] the list of paths that describe the project.
 * `tags`: [list of strings] (optional) tags for the project.
-* `subsQ`: [boolean] (optional) flag to include subfolders as projects.
+* `scan`: [boolean] (optional) flag to include subfolders as projects.
 
 Here is an example of `project.cson`:
 
@@ -74,7 +74,7 @@ Here is an example of `project.cson`:
     tags: [
       "projects"
     ],
-    subsQ: true
+    scan: true
   },
   {
     title: "samples",
