@@ -1,47 +1,31 @@
 # project-list
 
 <p align="center">
-  <a href="https://github.com/bacadra/atom-project-list/tags">
-  <img src="https://img.shields.io/github/v/tag/bacadra/atom-project-list?style=for-the-badge&label=Latest&color=blue" alt="Latest">
+  <a href="https://github.com/bacadra/pulsar-project-list/tags">
+  <img src="https://img.shields.io/github/v/tag/bacadra/pulsar-project-list?style=for-the-badge&label=Latest&color=blue" alt="Latest">
   </a>
-  <a href="https://github.com/bacadra/atom-project-list/issues">
-  <img src="https://img.shields.io/github/issues-raw/bacadra/atom-project-list?style=for-the-badge&color=blue" alt="OpenIssues">
+  <a href="https://github.com/bacadra/pulsar-project-list/issues">
+  <img src="https://img.shields.io/github/issues-raw/bacadra/pulsar-project-list?style=for-the-badge&color=blue" alt="OpenIssues">
   </a>
-  <a href="https://github.com/bacadra/atom-project-list/blob/master/package.json">
-  <img src="https://img.shields.io/github/languages/top/bacadra/atom-project-list?style=for-the-badge&color=blue" alt="Language">
+  <a href="https://github.com/bacadra/pulsar-project-list/blob/master/package.json">
+  <img src="https://img.shields.io/github/languages/top/bacadra/pulsar-project-list?style=for-the-badge&color=blue" alt="Language">
   </a>
-  <a href="https://github.com/bacadra/atom-project-list/blob/master/LICENSE">
-  <img src="https://img.shields.io/github/license/bacadra/atom-project-list?style=for-the-badge&color=blue" alt="Licence">
+  <a href="https://github.com/bacadra/pulsar-project-list/blob/master/LICENSE">
+  <img src="https://img.shields.io/github/license/bacadra/pulsar-project-list?style=for-the-badge&color=blue" alt="Licence">
   </a>
 </p>
 
-![project-list](https://github.com/bacadra/atom-project-list/raw/master/assets/project-list.png)
+![project-list](https://github.com/bacadra/pulsar-project-list/raw/master/assets/project-list.png)
 
-![recent-list](https://github.com/bacadra/atom-project-list/raw/master/assets/recent-list.png)
+![recent-list](https://github.com/bacadra/pulsar-project-list/raw/master/assets/recent-list.png)
 
-The Project list is a window that makes it easier to navigate through projects. The project file is located in the Atom configuration files under the name `project.cson`.
+The Project list is a window that makes it easier to navigate through projects. The project file is located in the Pulsar configuration files under the name `project.cson`.
 
 ## Installation
 
-### Atom Text Editor
+To install `project-list` search for [project-list](https://web.pulsar-edit.dev/packages/project-list) in the Install pane of the Pulsar settings or run `ppm install project-list`.
 
-The official Atom packages store has been [disabled](https://github.blog/2022-06-08-sunsetting-atom/). To obtain the latest version, please run the following shell command:
-
-```shell
-apm install bacadra/atom-project-list
-```
-
-This will allow you to directly download the package from the GitHub repository.
-
-### Pulsar Text Editor
-
-The package is compatible with [Pulsar](https://pulsar-edit.dev/) and can be installed using the following command:
-
-```shell
-ppm install bacadra/atom-project-list
-```
-
-Alternatively, you can directly install [project-list](https://web.pulsar-edit.dev/packages/project-list) from the Pulsar package store.
+Alternatively, run `ppm install bacadra/pulsar-project-list` to install a package directly from Github repository.
 
 ## Projects...
 
@@ -50,7 +34,7 @@ The project file must be a valid `.cson` file. The main file structure consists 
 * `title`: [string] the name of the project.
 * `paths`: [list of strings] the list of paths that describe the project.
 * `tags`: [list of strings] (optional) tags for the project.
-* `scan`: [boolean] (optional) flag to include subfolders as projects.
+* `subsQ`: [boolean] (optional) flag to include subfolders as projects.
 
 Here is an example of `project.cson`:
 
@@ -74,7 +58,7 @@ Here is an example of `project.cson`:
     tags: [
       "projects"
     ],
-    scan: true
+    subsQ: true
   },
   {
     title: "samples",
