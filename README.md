@@ -34,7 +34,7 @@ The project file must be a valid `.cson` file. The main file structure consists 
 * `title`: [string] the name of the project.
 * `paths`: [list of strings] the list of paths that describe the project.
 * `tags`: [list of strings] (optional) tags for the project.
-* `subsQ`: [boolean] (optional) flag to include subfolders as projects.
+* `scan`: [boolean] (optional) flag to include subfolders as projects.
 
 Here is an example of `project.cson`:
 
@@ -43,30 +43,30 @@ Here is an example of `project.cson`:
   {
     title: "py-bacadra",
     paths: [
-      "c:/bacadra/"
+      "C:/bacadra/"
     ],
     tags: [
       "bacadra"
     ]
   },
   {
-    title: "projects",
+    title: "Projects",
     paths: [
-      "c:/projects/",
-      "d:/projects/"
+      "C:/Projects/",
+      "D:/Projects/"
     ],
     tags: [
-      "projects"
+      "Projects"
     ],
-    subsQ: true
+    scan: true
   },
   {
-    title: "samples",
+    title: "Samples",
     paths: [
-      "c:/samples/"
+      "C:/Samples/"
     ],
     tags: [
-      "projects"
+      "Samples"
     ]
   }
 ]
@@ -85,11 +85,11 @@ In the `project-list` view, the following keymap is available:
 
 * `Enter`: opens a new window with the selected project.
 * `Alt-Enter`: closes the active window and opens a new one with the selected project.
-* `Shift-Enter`: appends the selected project to the projects in the active window
+* `Shift-Enter`: appends the selected project to the projects in the active window.
 
 ## Configuration
 
-The `Preserve last search` config option is used from the `command-palette` package. The [file-icons](https://github.com/file-icons/atom) package is required for this functionality.
+The `Preserve last search` config option is used from the `command-palette` package.
 
 # Contributing [🍺](https://www.buymeacoffee.com/asiloisad)
 
