@@ -19,7 +19,7 @@
 
 ![recent-list](https://github.com/bacadra/pulsar-project-list/raw/master/assets/recent-list.png)
 
-The Project list is a window that makes it easier to navigate through projects. The project file is located in the Pulsar configuration files under the name `project.cson`.
+Get easy access to all your projects and manage them with project specific options. The project file is located in the Pulsar configuration files under the name `project.cson`.
 
 ## Installation
 
@@ -27,14 +27,19 @@ To install `project-list` search for [project-list](https://web.pulsar-edit.dev/
 
 Alternatively, run `ppm install bacadra/pulsar-project-list` to install a package directly from Github repository.
 
-## Projects...
+## `project.cson`
 
-The project file must be a valid `.cson` file. The main file structure consists of a list of objects with the following keys:
+You can edit a file by command `project-list:edit` or by manually opening `<config-dir>/project.cson`. The main file structure consists of a array of objects.
 
-* `title`: [string] the name of the project.
-* `paths`: [list of strings] the list of paths that describe the project.
-* `tags`: [list of strings] (optional) tags for the project.
-* `scan`: [boolean] (optional) flag to include subfolders as projects.
+Setting | Type | Description | Default
+-|-|-|-
+`title` | `string` | Project title used in the project list | *mandatory*
+`paths` | `array[string]` | The array of paths to project directories | *mandatory*
+`tags` | `array[string]` | The tags help's organize and find projects | `[]`
+`scan` | `boolean` | scan paths and add subdir as projects | `false`
+`icon` | `string` | custom icon of project e.g. `"icon-star"` | `"icon-file-directory"`
+`devMode` | `boolean` | project should open in [Dev Mode](https://pulsar-edit.dev/docs/launch-manual/sections/core-hacking/#running-in-development-mode) | `falsse`
+`safeMode` | `boolean` | project should open in [Safe Mode](https://pulsar-edit.dev/docs/launch-manual/sections/core-hacking/#using-safe-mode) | `false`
 
 Here is an example of `project.cson`:
 
@@ -68,6 +73,7 @@ Here is an example of `project.cson`:
     tags: [
       "Samples"
     ]
+    devMode: true
   }
 ]
 ```
