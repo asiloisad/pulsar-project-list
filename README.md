@@ -25,7 +25,7 @@ Get easy access to all your projects and manage them with project specific optio
 
 To install `project-list` search for [project-list](https://web.pulsar-edit.dev/packages/project-list) in the Install pane of the Pulsar settings or run `ppm install project-list`.
 
-Alternatively, run `ppm install bacadra/pulsar-project-list` to install a package directly from Github repository.
+Alternatively, you can run `ppm install bacadra/pulsar-project-list` to install a package directly from the Github repository.
 
 ## `project.cson`
 
