@@ -1,10 +1,10 @@
 # project-list
 
+Easy access and switching between projects with options. The project file is located in the Pulsar configuration files under the name `project.cson`.
+
 ![project-list](https://github.com/bacadra/pulsar-project-list/raw/master/assets/project-list.png)
 
 ![recent-list](https://github.com/bacadra/pulsar-project-list/raw/master/assets/recent-list.png)
-
-Get easy access to all your projects and manage them with project specific options. The project file is located in the Pulsar configuration files under the name `project.cson`.
 
 ## Installation
 
@@ -61,20 +61,21 @@ Here is an example of `project.cson`:
 ]
 ```
 
-## Shortcuts
+## Commands
 
-In the `atom-workspace` space, the following commands are available:
+In `atom-workspace` there are available commands:
 
-- `project-list:toggle`: (default `F10`) opens the project list.
-- `project-list:recent`: (default `Alt-F10`) opens the recent projects.
-- `project-list:update`: manually update the projects list.
-- `project-list:edit`: open the project configuration file.
+- `project-list:toggle`: (default `F10`) opens the project list
+- `project-list:recent`: (default `Alt-F10`) opens the recent projects
+- `project-list:update`: manually update the projects list
+- `project-list:edit`: open the project configuration file
 
-In the `project-list` view, the following keymap is available:
+In `project-list` there are available shortcuts:
 
-- `Enter`: opens a new window with the selected project.
-- `Alt-Enter`: closes the active window and opens a new one with the selected project.
-- `Shift-Enter`: appends the selected project to the projects in the active window.
+- `select-list:open`: (default `Enter`): opens a new window with the selected project
+- `select-list:swap`: (default `Alt-Enter`): closes the active window and opens a new one with the selected project
+- `select-list:append`: (default `Shift-Enter`): appends the selected project to the projects in the active window
+- `select-list:paste`: (default `Alt-V`): paste paths into text-editor
 
 ## Configuration
 
@@ -82,4 +83,4 @@ The `Preserve last search` config option is used from the `command-palette` pack
 
 # Contributing
 
-If you have any ideas on how to improve the package, spot any bugs, or would like to support the development of new features, please feel free to share them via GitHub.
+Got ideas to make this package better, found a bug, or want to help add new features? Just drop your thoughts on GitHub — any feedback’s welcome!
