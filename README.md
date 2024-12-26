@@ -72,11 +72,11 @@ In `atom-workspace` there are available commands:
 
 In `project-list` there are available shortcuts:
 
-- `project-list:open`: (default `Enter`): opens a new window with the selected project
-- `project-list:swap`: (default `Alt-Enter`): closes the active window and opens a new one with the selected project
-- `project-list:append`: (default `Shift-Enter`): appends the selected project to the projects in the active window
-- `project-list:paste`: (default `Alt-V`): paste paths into text-editor
-- `project-list:update`: (default `F5`): manually update the projects list
+- `project-list:open`: (default `Enter`) opens a new window with the selected project
+- `project-list:swap`: (default `Alt-Enter`) closes the active window and opens a new one with the selected project
+- `project-list:append`: (default `Shift-Enter`) appends the selected project to the projects in the active window
+- `project-list:paste`: (default `Alt-V`) paste paths into text-editor
+- `project-list:update`: (default `F5`) manually update the projects list
 
 ## Configuration
 
