@@ -1,6 +1,6 @@
 # project-list
 
-Easy access and switching between projects with options. The project file is located in the Pulsar configuration files under the name `project.cson`.
+Easy access and switching between projects with options. The project file is located in the Pulsar configuration files under the name `projects.cson`.
 
 ![project-list](https://github.com/bacadra/pulsar-project-list/raw/master/assets/project-list.png)
 
@@ -10,9 +10,9 @@ Easy access and switching between projects with options. The project file is loc
 
 To install `project-list` search for [project-list](https://web.pulsar-edit.dev/packages/project-list) in the Install pane of the Pulsar settings or run `ppm install project-list`. Alternatively, you can run `ppm install bacadra/pulsar-project-list` to install a package directly from the Github repository.
 
-## `project.cson`
+## `projects.cson`
 
-You can edit a file by command `project-list:edit` or by manually opening `<config-dir>/project.cson`. The main file structure consists of a array of objects.
+You can edit a file by command `project-list:edit` or by manually opening `<config-dir>/projects.cson`. The main file structure consists of a array of objects.
 
 Setting | Type | Description | Default
 -|-|-|-
@@ -21,10 +21,10 @@ Setting | Type | Description | Default
 `tags` | `array[string]` | The tags help's organize and find projects | `[]`
 `scan` | `boolean` | scan paths and add subdir as projects | `false`
 `icon` | `string` | custom icon of project e.g. `"icon-star"` | `"icon-file-directory"`
-`devMode` | `boolean` | project should open in [Dev Mode](https://pulsar-edit.dev/docs/launch-manual/sections/core-hacking/#running-in-development-mode) | `falsse`
+`devMode` | `boolean` | project should open in [Dev Mode](https://pulsar-edit.dev/docs/launch-manual/sections/core-hacking/#running-in-development-mode) | `false`
 `safeMode` | `boolean` | project should open in [Safe Mode](https://pulsar-edit.dev/docs/launch-manual/sections/core-hacking/#using-safe-mode) | `false`
 
-Here is an example of `project.cson`:
+Here is an example of `projects.cson`:
 
 ```cson
 [
