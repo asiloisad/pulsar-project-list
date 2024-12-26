@@ -1,7 +1,7 @@
 {
   "name": "project-list",
   "main": "./lib/main",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Easy access and switching between projects with options",
   "dependencies": {
     "atom-select-list": "^0.8.1",
