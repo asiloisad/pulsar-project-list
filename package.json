@@ -1,20 +1,18 @@
 {
   "name": "project-list",
-  "main": "./lib/main",
-  "version": "0.3.0",
   "description": "Easy access and switching between projects with options",
+  "repository": "https://github.com/bacadra/pulsar-project-list",
+  "version": "0.3.0",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.100.0 <2.0.0"
+  },
+  "main": "./lib/main",
   "dependencies": {
     "atom-select-list": "^0.8.1",
     "cson": "^7.20.0",
     "diacritic": "0.0.2",
     "etch": "^0.14.1",
     "glob": "^10.3.3"
-  },
-  "engines": {
-    "atom": ">=1.100.0 <2.0.0"
-  },
-  "homepage": "https://github.com/bacadra/pulsar-project-list",
-  "url": "https://github.com/bacadra/pulsar-project-list",
-  "repository": "https://github.com/bacadra/pulsar-project-list",
-  "license": "MIT"
+  }
 }
