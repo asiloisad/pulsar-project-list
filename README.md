@@ -65,18 +65,18 @@ Here is an example of `projects.cson`:
 
 In `atom-workspace` there are available commands:
 
-- `project-list:toggle`: (default `F10`) opens the project list
-- `project-list:recent`: (default `Alt-F10`) opens the recent projects
-- `project-list:update`: manually update the projects list
-- `project-list:edit`: open the project configuration file
+- `project-list:toggle`: (default `F10`) opens project list
+- `project-list:recent`: (default `Alt-F10`) opens recent projects
+- `project-list:update`: update projects list
+- `project-list:edit`: open configuration file
 
 In `project-list` there are available shortcuts:
 
-- `project-list:open`: (default `Enter`) opens a new window with the selected project
-- `project-list:swap`: (default `Alt-Enter`) closes the active window and opens a new one with the selected project
-- `project-list:append`: (default `Shift-Enter`) appends the selected project to the projects in the active window
-- `project-list:paste`: (default `Alt-V`) paste paths into text-editor
-- `project-list:update`: (default `F5`) manually update the projects list
+- `project-list:open`: (default `Enter`) opens a new window with selected project
+- `project-list:swap`: (default `Alt-Enter`) closes active window and opens a new one with the selected project
+- `project-list:append`: (default `Shift-Enter`) appends selected project to active window
+- `project-list:paste`: (default `Alt-V`) paste paths into active text-editor
+- `project-list:update`: (default `F5`) update projects list
 
 ## Configuration
 
