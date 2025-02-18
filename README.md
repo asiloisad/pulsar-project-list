@@ -2,13 +2,13 @@
 
 Easy access and switching between projects with options. The project file is located in the Pulsar configuration files under the name `projects.cson`.
 
-![project-list](https://github.com/bacadra/pulsar-project-list/raw/master/assets/project-list.png)
+![project-list](https://github.com/asiloisad/pulsar-project-list/raw/master/assets/project-list.png)
 
-![recent-list](https://github.com/bacadra/pulsar-project-list/raw/master/assets/recent-list.png)
+![recent-list](https://github.com/asiloisad/pulsar-project-list/raw/master/assets/recent-list.png)
 
 ## Installation
 
-To install `project-list` search for [project-list](https://web.pulsar-edit.dev/packages/project-list) in the Install pane of the Pulsar settings or run `ppm install project-list`. Alternatively, you can run `ppm install bacadra/pulsar-project-list` to install a package directly from the Github repository.
+To install `project-list` search for [project-list](https://web.pulsar-edit.dev/packages/project-list) in the Install pane of the Pulsar settings or run `ppm install project-list`. Alternatively, you can run `ppm install asiloisad/pulsar-project-list` to install a package directly from the Github repository.
 
 ## `projects.cson`
 

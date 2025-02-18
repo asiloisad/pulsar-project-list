@@ -1,7 +1,7 @@
 {
   "name": "project-list",
   "description": "Easy access and switching between projects with options",
-  "repository": "https://github.com/bacadra/pulsar-project-list",
+  "repository": "https://github.com/asiloisad/pulsar-project-list",
   "version": "0.4.0",
   "license": "MIT",
   "engines": {
