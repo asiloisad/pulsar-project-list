@@ -23,26 +23,32 @@
       "type": "boolean",
       "default": true
     },
-    "windowTitle": {
-      "order": 2,
-      "title": "Add project title to window title",
-      "description": "If a list of open folders matches a project paths, then add project title to window title.",
-      "type": "boolean",
-      "default": true
-    },
     "useCache": {
-      "order": 3,
+      "order": 2,
       "title": "Use cached data",
       "description": "Dump list of project to cache file. Useful if scans used.",
       "type": "boolean",
       "default": true
     },
     "checkExists": {
-      "order": 4,
+      "order": 3,
       "title": "Existing items only",
       "description": "Add item to list only if one or more of its paths exist.",
       "type": "boolean",
       "default": true
+    },
+    "windowTitle": {
+      "order": 4,
+      "title": "Add project title to window title",
+      "description": "If a list of open folders matches a project paths, then add project title to window title.",
+      "type": "integer",
+      "enum": [
+        { "value":0, "description":"<Original_title>" },
+        { "value":1, "description":"<Project_title>" },
+        { "value":2, "description":"<Original_title> — <Original_title>" },
+        { "value":3, "description":"[<Original_title>] <Original_title>" }
+      ],
+      "default": 1
     }
   }
 }
