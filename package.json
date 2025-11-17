@@ -26,21 +26,21 @@
     "useCache": {
       "order": 2,
       "title": "Use cached data",
-      "description": "Dump list of project to cache file. Useful if scans used.",
+      "description": "Dump the project list to a cache file. Useful if scanning is used.",
       "type": "boolean",
       "default": true
     },
     "checkExists": {
       "order": 3,
       "title": "Existing items only",
-      "description": "Add item to list only if one or more of its paths exist.",
+      "description": "Add an item to the list only if at least one of its paths exists.",
       "type": "boolean",
       "default": true
     },
     "windowTitle": {
       "order": 4,
-      "title": "Add project title to window title",
-      "description": "If a list of open folders matches a project paths, then add project title to window title.",
+      "title": "Modify window title",
+      "description": "If the list of open folders matches the project paths, modify the window title.",
       "type": "integer",
       "enum": [
         { "value":0, "description":"<Original_title>" },
