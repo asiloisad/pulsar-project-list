@@ -37,8 +37,15 @@
       "type": "boolean",
       "default": true
     },
-    "windowTitle": {
+    "parseTitleTags": {
       "order": 4,
+      "title": "Parse [tags] in titles",
+      "description": "Parse and style [tag] patterns in project titles as tag elements.",
+      "type": "boolean",
+      "default": true
+    },
+    "windowTitle": {
+      "order": 5,
       "title": "Modify window title",
       "description": "If the list of open folders matches the project paths, modify the window title.",
       "type": "integer",
