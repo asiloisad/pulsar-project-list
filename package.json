@@ -15,6 +15,20 @@
     "etch": "^0.14.1",
     "glob": "^10.3.3"
   },
+  "providedServices": {
+    "project-list": {
+      "description": "Provides access to the project list manager",
+      "versions": {
+        "1.0.0": "provideProjectList"
+      }
+    },
+    "recent-list": {
+      "description": "Provides access to the recent projects list manager",
+      "versions": {
+        "1.0.0": "provideRecentList"
+      }
+    }
+  },
   "configSchema": {
     "showKeystrokes": {
       "order": 1,
