@@ -84,7 +84,49 @@ In `project-list` there are available shortcuts:
 
 ## Configuration
 
-The `Preserve last search` config option is used from the `command-palette` package.
+The package provides several configuration options available in Settings → Packages → project-list:
+
+### Enable keystroke hints
+Shows info message with available keyboard shortcuts at the bottom of the project list panel.
+- **Type**: Boolean
+- **Default**: `true`
+
+### Use cached data
+When enabled, the parsed project list is stored in a cache file located in the Pulsar cache directory (`<config-dir>/compile-cache/projects.json`). This significantly improves performance when using the `scan` feature, as the package doesn't need to re-scan directories every time you open the project list. The cache is automatically updated when the `projects.cson` file changes.
+- **Type**: Boolean
+- **Default**: `true`
+
+### Existing items only
+When enabled, only adds projects to the list if at least one of their paths exists on the filesystem. This helps keep the project list clean by filtering out projects with non-existent directories.
+- **Type**: Boolean
+- **Default**: `true`
+
+### Parse [tags] in titles
+When enabled, any text in the format `[tag]` within project titles will be parsed and displayed as styled tag elements (similar to the regular tags). For example, a title like `My Project [dev]` will display "dev" as a styled tag.
+- **Type**: Boolean
+- **Default**: `true`
+
+### Modify window title
+Controls how the window title is modified when the open folders match a project's paths:
+- **0**: Original title (no modification)
+- **1**: Project title only
+- **2**: Project title — Original title
+- **3**: [Project title] Original title
+- **Type**: Integer (0-3)
+- **Default**: `1`
+
+### Preserve last search
+This option is inherited from the `command-palette` package and preserves your last search query when reopening the project list.
+
+## Services
+
+This package provides two services that can be consumed by other Pulsar packages:
+
+### project-list (v1.0.0)
+Provides access to the project list manager instance.
+
+### recent-list (v1.0.0)
+Provides access to the recent projects list manager instance.
 
 # Contributing
 
