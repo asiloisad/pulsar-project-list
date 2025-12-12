@@ -1,0 +1,4 @@
+- **Enter** — Open in new window
+- **Alt+Enter** — Swap current window
+- **Shift+Enter** — Append to current window
+- **Alt+V** — Insert path

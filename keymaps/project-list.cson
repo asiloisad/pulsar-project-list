@@ -4,8 +4,8 @@
   'alt-f10' : 'project-list:recent'
 
 '.project-list atom-text-editor[mini]':
-  'enter'      : 'project-list:open'
-  'alt-enter'  : 'project-list:swap'
-  'shift-enter': 'project-list:append'
-  'alt-v'      : 'project-list:paste'
-  'f5'         : 'project-list:update'
+  'enter'      : 'select-list:open'
+  'alt-enter'  : 'select-list:swap'
+  'shift-enter': 'select-list:append'
+  'alt-v'      : 'select-list:paste'
+  'f5'         : 'select-list:update'
