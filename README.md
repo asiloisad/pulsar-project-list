@@ -13,6 +13,7 @@ Quick access and switching between projects. Manage projects with tags, scanning
 - **Directory scanning**: Auto-discover projects in directories.
 - **Tags support**: Organize and filter projects by tags.
 - **Multiple paths**: Projects can span multiple directories.
+- **Tree view integration**: When used with [tree-view-plus](https://github.com/asiloisad/pulsar-tree-view-plus), the empty project view provides quick access to the project list and recent projects.
 
 ## Installation
 
