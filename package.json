@@ -1,6 +1,6 @@
 {
   "name": "project-list",
-  "description": "Easy access and switching between projects with options",
+  "description": "Quick access and switching between projects",
   "repository": "https://github.com/asiloisad/pulsar-project-list",
   "version": "0.6.12",
   "license": "MIT",

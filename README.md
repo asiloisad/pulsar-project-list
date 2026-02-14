@@ -135,17 +135,13 @@ Controls how the window title is modified when the open folders match a project'
 - **Type**: Integer (0-3)
 - **Default**: `1`
 
-## Service
+## Provided Service `project-list`
 
-The package provides services for other packages:
+Provides access to the project list manager instance. Other packages can use this to query and interact with the saved project list.
 
-### project-list (v1.0.0)
+## Provided Service `recent-list`
 
-Provides access to the project list manager instance.
-
-### recent-list (v1.0.0)
-
-Provides access to the recent projects list manager instance.
+Provides access to the recent projects list manager instance. Other packages can use this to query and interact with the recent projects history.
 
 ## Contributing
 
