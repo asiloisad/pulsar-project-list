@@ -11,7 +11,7 @@
   "dependencies": {
     "cson": "^7.20.0",
     "glob": "^10.3.3",
-    "pulsar-select-list": "^1.2.0"
+    "pulsar-select-list": "^1.4.1"
   },
   "providedServices": {
     "project-list": {
