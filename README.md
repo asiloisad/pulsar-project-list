@@ -90,6 +90,8 @@ Commands available in `.project-list`:
 - `select-list:switch`: (`Ctrl+Enter`) switches to a new window with the selected project,
 - `select-list:append`: (`Shift+Enter`) appends selected project to active window,
 - `select-list:paste`: (`Alt+V`) paste paths into active text-editor,
+- `select-list:external`: (`Alt+F12`) open folders externally (via [open-external](https://github.com/asiloisad/pulsar-open-external)),
+- `select-list:show`: (`Ctrl+F12`) show folders in explorer (via [open-external](https://github.com/asiloisad/pulsar-open-external)),
 - `select-list:update`: (`F5`) update projects list.
 
 ## Configuration
@@ -134,6 +136,10 @@ Controls how the window title is modified when the open folders match a project'
 - **3**: [Project title] Original title
 - **Type**: Integer (0-3)
 - **Default**: `1`
+
+## Consumed Service `open-external`
+
+When the [open-external](https://github.com/asiloisad/pulsar-open-external) package is installed, two additional actions become available in both project list and recent list: open folders externally (`Alt+F12`) and show folders in explorer (`Ctrl+F12`). For multi-path projects, the action is applied to each path.
 
 ## Provided Service `project-list`
 
