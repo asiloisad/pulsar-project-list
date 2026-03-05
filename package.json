@@ -9,9 +9,9 @@
   },
   "main": "./lib/main",
   "dependencies": {
+    "@asiloisad/select-list": "^1.5.0",
     "cson": "^7.20.0",
-    "glob": "^10.3.3",
-    "pulsar-select-list": "^1.4.1"
+    "glob": "^10.5.0"
   },
   "providedServices": {
     "project-list": {
