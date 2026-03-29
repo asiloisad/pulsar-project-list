@@ -132,7 +132,7 @@ Controls how the window title is modified when the open folders match a project'
 
 - **0**: Original title (no modification)
 - **1**: Project title only
-- **2**: Project title — Original title
+- **2**: Project title. Original title
 - **3**: [Project title] Original title
 - **Type**: Integer (0-3)
 - **Default**: `1`
@@ -151,4 +151,4 @@ Provides access to the recent projects list manager instance. Other packages can
 
 ## Contributing
 
-Got ideas to make this package better, found a bug, or want to help add new features? Just drop your thoughts on GitHub — any feedback's welcome!
+Got ideas to make this package better, found a bug, or want to help add new features? Just drop your thoughts on GitHub. Any feedback is welcome!
