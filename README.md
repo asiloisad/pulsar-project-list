@@ -11,8 +11,14 @@ Quick access and switching between projects. Manage projects with tags, scanning
 - **Project list**: Browse and open saved projects with `F10`.
 - **Recent list**: Access recently opened projects with `Alt+F10`.
 - **Directory scanning**: Auto-discover projects in directories.
+- **Glob paths**: Use wildcard patterns directly in `paths` to expand matching directories at load time.
 - **Tags support**: Organize and filter projects by tags.
 - **Multiple paths**: Projects can span multiple directories.
+- **Multiple open modes**: Open in new window, swap, switch in same window, or append to current window.
+- **Dev and safe mode**: Open projects in dev mode (`Alt+D`) or safe mode (`Alt+S`) directly from the list.
+- **Visual indicators**: Items configured with `devMode` or `safeMode` are marked with distinct icons in the list.
+- **Window title**: Automatically updates the window title to reflect the active project name.
+- **Performance cache**: Project list is cached to avoid re-scanning on every open.
 - **Tree view integration**: When used with [tree-view-plus](https://github.com/asiloisad/pulsar-tree-view-plus), the empty project view provides quick access to the project list and recent projects.
 
 ## Installation
@@ -26,7 +32,7 @@ You can edit a file by command `project-list:edit` or by manually opening `<conf
 | Setting | Type | Description | Default |
 | --- | --- | --- | --- |
 | `title` | `string` | Project title used in the project list | *mandatory* |
-| `paths` | `string[]` | The array of paths to project directories | *mandatory* |
+| `paths` | `string[]` | The array of paths to project directories. Glob wildcards (`*`, `**`, `?`, `[...]`, `{...}`) are supported and expand to all matching directories at load time. | *mandatory* |
 | `tags` | `string[]` | The tags help's organize and find projects | `[]` |
 | `scan` | `boolean\|string\|string[]` | scan paths and add subdirs as projects. A `true` is equal to `"*/"`. [More...](https://github.com/isaacs/node-glob?tab=readme-ov-file#glob-primer) | `false` |
 | `icon` | `string` | custom icon of project e.g. `"icon-star"` | `"icon-file-directory"` |
@@ -38,12 +44,12 @@ Here is an example of `projects.cson`:
 ```cson
 [
   {
-    title: "py-bacadra",
+    title: "My Library",
     paths: [
-      "C:/bacadra/"
+      "C:/Work/library/"
     ],
     tags: [
-      "bacadra"
+      "work"
     ]
     scan: true
   },
@@ -54,7 +60,7 @@ Here is an example of `projects.cson`:
       "D:/Projects/"
     ],
     tags: [
-      "Projects"
+      "work"
     ],
     scan: [
       "*/"
@@ -62,14 +68,23 @@ Here is an example of `projects.cson`:
     ]
   },
   {
-    title: "Samples",
+    title: "Core",
     paths: [
-      "C:/Samples/"
+      "C:/Work/core/"
     ],
     tags: [
-      "Samples"
+      "work"
     ]
     devMode: true
+  },
+  {
+    title: "Packages",
+    paths: [
+      "C:/Work/packages/*"
+    ],
+    tags: [
+      "work"
+    ]
   }
 ]
 ```
