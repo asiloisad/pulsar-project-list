@@ -90,6 +90,8 @@ Commands available in `.project-list`:
 - `select-list:switch`: (`Ctrl+Enter`) switches to a new window with the selected project,
 - `select-list:append`: (`Shift+Enter`) appends selected project to active window,
 - `select-list:paste`: (`Alt+V`) paste paths into active text-editor,
+- `select-list:dev`: (`Alt+D`) opens a new window with selected project in dev mode,
+- `select-list:safe`: (`Alt+S`) opens a new window with selected project in safe mode,
 - `select-list:external`: (`Alt+F12`) open folders externally (via [open-external](https://github.com/asiloisad/pulsar-open-external)),
 - `select-list:show`: (`Ctrl+F12`) show folders in explorer (via [open-external](https://github.com/asiloisad/pulsar-open-external)),
 - `select-list:update`: (`F5`) update projects list.
