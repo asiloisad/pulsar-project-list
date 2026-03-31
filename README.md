@@ -111,48 +111,18 @@ Commands available in `.project-list`:
 - `select-list:show`: (`Ctrl+F12`) show folders in explorer (via [open-external](https://github.com/asiloisad/pulsar-open-external)),
 - `select-list:update`: (`F5`) update projects list.
 
-## Configuration
+## Filtering
 
-The package provides several configuration options available in Settings → Packages → project-list:
+The search query is matched against a combined text string in the format `#tag1 #tag2 Title`. Tags are placed first so that a query like `"pulsar pack"` can match a tag `Pulsar` followed by a title `Packages` in the correct order.
 
-### Enable keystroke hints
+Prefixing a query term with `#` targets tags explicitly. For example, `#work` will rank projects tagged `work` much higher, since the `#` character is part of the internal text and aligns directly with the tag prefix.
 
-Shows info message with available keyboard shortcuts at the bottom of the project list panel.
+Fuzzy matching uses the `fuzzaldrin` algorithm. Match scores are further adjusted by:
 
-- **Type**: Boolean
-- **Default**: `true`
+- **Title length**: shorter titles score higher (common projects rank up),
+- **Tag count**: fewer tags score higher (general projects rank up).
 
-### Use cached data
-
-When enabled, the parsed project list is stored in a cache file located in the Pulsar cache directory (`<config-dir>/compile-cache/projects.json`). This significantly improves performance when using the `scan` feature, as the package doesn't need to re-scan directories every time you open the project list. The cache is automatically updated when the `projects.cson` file changes.
-
-- **Type**: Boolean
-- **Default**: `true`
-
-### Existing items only
-
-When enabled, only adds projects to the list if at least one of their paths exists on the filesystem. This helps keep the project list clean by filtering out projects with non-existent directories.
-
-- **Type**: Boolean
-- **Default**: `true`
-
-### Parse [tags] in titles
-
-When enabled, any text in the format `[tag]` within project titles will be parsed and displayed as styled tag elements (similar to the regular tags). For example, a title like `My Project [dev]` will display "dev" as a styled tag.
-
-- **Type**: Boolean
-- **Default**: `true`
-
-### Modify window title
-
-Controls how the window title is modified when the open folders match a project's paths:
-
-- **0**: Original title (no modification)
-- **1**: Project title only
-- **2**: Project title. Original title
-- **3**: [Project title] Original title
-- **Type**: Integer (0-3)
-- **Default**: `1`
+In the recent list, scoring also applies a recency bonus (more recently opened projects rank up) and a depth bonus (shallower paths rank up).
 
 ## Consumed Service `open-external`
 
