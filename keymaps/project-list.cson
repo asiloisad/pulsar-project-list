@@ -14,3 +14,4 @@
   'alt-f12'    : 'select-list:external'
   'ctrl-f12'   : 'select-list:show'
   'f5'         : 'select-list:update'
+  'alt-delete' : 'select-list:delete'
