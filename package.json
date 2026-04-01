@@ -18,12 +18,6 @@
       "versions": {
         "1.0.0": "provideProjectList"
       }
-    },
-    "recent-list": {
-      "description": "Provides access to the recent projects list manager",
-      "versions": {
-        "1.0.0": "provideRecentList"
-      }
     }
   },
   "consumedServices": {

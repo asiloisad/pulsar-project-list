@@ -1,15 +1,12 @@
 # project-list
 
-Quick access and switching between projects. Manage projects with tags, scanning, and recent history from a fuzzy-searchable list.
+Quick access and switching between projects. Manage projects with tags, scanning.
 
-![project-list](https://github.com/asiloisad/pulsar-project-list/raw/master/assets/project-list.png)
-
-![recent-list](https://github.com/asiloisad/pulsar-project-list/raw/master/assets/recent-list.png)
+![demo](https://github.com/asiloisad/pulsar-project-list/raw/master/assets/demo.png)
 
 ## Features
 
 - **Project list**: Browse and open saved projects.
-- **Recent list**: Access recently opened projects.
 - **Directory scanning**: Auto-discover projects in directories.
 - **Glob paths**: Use wildcard patterns directly in `paths` to expand matching directories at load time.
 - **Tags support**: Organize and filter projects by tags.
@@ -19,11 +16,13 @@ Quick access and switching between projects. Manage projects with tags, scanning
 - **Visual indicators**: Items configured with `devMode` or `safeMode` are marked with distinct icons in the list.
 - **Window title**: Automatically updates the window title to reflect the active project name.
 - **Performance cache**: Project list is cached to avoid re-scanning on every open.
-- **Tree view integration**: When used with [tree-view-plus](https://github.com/asiloisad/pulsar-tree-view-plus), the empty project view provides quick access to the project list and recent projects.
+- **Tree view integration**: When used with [tree-view-plus](https://github.com/asiloisad/pulsar-tree-view-plus), the empty project view provides quick access to the project list.
 
 ## Installation
 
 To install `project-list` search for [project-list](https://web.pulsar-edit.dev/packages/project-list) in the Install pane of the Pulsar settings or run `ppm install project-list`. Alternatively, you can run `ppm install asiloisad/pulsar-project-list` to install a package directly from the GitHub repository.
+
+The [recent-list](https://github.com/asiloisad/pulsar-recent-list) package extends the workflow with a recently opened projects list, fuzzy-searchable and sorted by recency.
 
 ## `projects.cson`
 
@@ -94,7 +93,6 @@ Here is an example of `projects.cson`:
 Commands available in `atom-workspace`:
 
 - `project-list:toggle`: <kbd>F10</kbd> opens project list,
-- `project-list:recent`: <kbd>Alt+F10</kbd> opens recent list,
 - `project-list:update`: update projects list,
 - `project-list:edit`: <kbd>Ctrl+F10</kbd> open configuration file.
 
@@ -122,19 +120,13 @@ Fuzzy matching uses the `fuzzaldrin` algorithm. Match scores are further adjuste
 - **Title length**: shorter titles score higher (common projects rank up),
 - **Tag count**: fewer tags score higher (general projects rank up).
 
-In the recent list, scoring also applies a recency bonus (more recently opened projects rank up) and a depth bonus (shallower paths rank up).
-
 ## Consumed Service `open-external`
 
-When the [open-external](https://github.com/asiloisad/pulsar-open-external) package is installed, two additional actions become available in both project list and recent list: open folders externally and show folders in explorer. For multi-path projects, the action is applied to each path.
+When the [open-external](https://github.com/asiloisad/pulsar-open-external) package is installed, two additional actions become available in both project list: open folders externally and show folders in explorer. For multi-path projects, the action is applied to each path.
 
 ## Provided Service `project-list`
 
 Provides access to the project list manager instance. Other packages can use this to query and interact with the saved project list.
-
-## Provided Service `recent-list`
-
-Provides access to the recent projects list manager instance. Other packages can use this to query and interact with the recent projects history.
 
 ## Contributing
 
