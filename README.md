@@ -8,14 +8,14 @@ Quick access and switching between projects. Manage projects with tags, scanning
 
 ## Features
 
-- **Project list**: Browse and open saved projects with `F10`.
-- **Recent list**: Access recently opened projects with `Alt+F10`.
+- **Project list**: Browse and open saved projects.
+- **Recent list**: Access recently opened projects.
 - **Directory scanning**: Auto-discover projects in directories.
 - **Glob paths**: Use wildcard patterns directly in `paths` to expand matching directories at load time.
 - **Tags support**: Organize and filter projects by tags.
 - **Multiple paths**: Projects can span multiple directories.
 - **Multiple open modes**: Open in new window, swap, switch in same window, or append to current window.
-- **Dev and safe mode**: Open projects in dev mode (`Alt+D`) or safe mode (`Alt+S`) directly from the list.
+- **Dev and safe mode**: Open projects in dev mode or safe mode directly from the list.
 - **Visual indicators**: Items configured with `devMode` or `safeMode` are marked with distinct icons in the list.
 - **Window title**: Automatically updates the window title to reflect the active project name.
 - **Performance cache**: Project list is cached to avoid re-scanning on every open.
@@ -93,23 +93,23 @@ Here is an example of `projects.cson`:
 
 Commands available in `atom-workspace`:
 
-- `project-list:toggle`: (`F10`) opens project list,
-- `project-list:recent`: (`Alt+F10`) opens recent list,
+- `project-list:toggle`: <kbd>F10</kbd> opens project list,
+- `project-list:recent`: <kbd>Alt+F10</kbd> opens recent list,
 - `project-list:update`: update projects list,
-- `project-list:edit`: (`Ctrl+F10`) open configuration file.
+- `project-list:edit`: <kbd>Ctrl+F10</kbd> open configuration file.
 
 Commands available in `.project-list`:
 
-- `select-list:open`: (`Enter`) opens a new window with selected project,
-- `select-list:swap`: (`Alt+Enter`) closes active window and opens a new one with the selected project,
-- `select-list:switch`: (`Ctrl+Enter`) switches to a new window with the selected project,
-- `select-list:append`: (`Shift+Enter`) appends selected project to active window,
-- `select-list:paste`: (`Alt+V`) paste paths into active text-editor,
-- `select-list:dev`: (`Alt+D`) opens a new window with selected project in dev mode,
-- `select-list:safe`: (`Alt+S`) opens a new window with selected project in safe mode,
-- `select-list:external`: (`Alt+F12`) open folders externally (via [open-external](https://github.com/asiloisad/pulsar-open-external)),
-- `select-list:show`: (`Ctrl+F12`) show folders in explorer (via [open-external](https://github.com/asiloisad/pulsar-open-external)),
-- `select-list:update`: (`F5`) update projects list.
+- `select-list:open`: <kbd>Enter</kbd> opens a new window with selected project,
+- `select-list:swap`: <kbd>Alt+Enter</kbd> closes active window and opens a new one with the selected project,
+- `select-list:switch`: <kbd>Ctrl+Enter</kbd> switches to a new window with the selected project,
+- `select-list:append`: <kbd>Shift+Enter</kbd> appends selected project to active window,
+- `select-list:paste`: <kbd>Alt+V</kbd> paste paths into active text-editor,
+- `select-list:dev`: <kbd>Alt+D</kbd> opens a new window with selected project in dev mode,
+- `select-list:safe`: <kbd>Alt+S</kbd> opens a new window with selected project in safe mode,
+- `select-list:external`: <kbd>Alt+F12</kbd> open folders externally (via [open-external](https://github.com/asiloisad/pulsar-open-external)),
+- `select-list:show`: <kbd>Ctrl+F12</kbd> show folders in explorer (via [open-external](https://github.com/asiloisad/pulsar-open-external)),
+- `select-list:update`: <kbd>F5</kbd> update projects list.
 
 ## Filtering
 
@@ -126,7 +126,7 @@ In the recent list, scoring also applies a recency bonus (more recently opened p
 
 ## Consumed Service `open-external`
 
-When the [open-external](https://github.com/asiloisad/pulsar-open-external) package is installed, two additional actions become available in both project list and recent list: open folders externally (`Alt+F12`) and show folders in explorer (`Ctrl+F12`). For multi-path projects, the action is applied to each path.
+When the [open-external](https://github.com/asiloisad/pulsar-open-external) package is installed, two additional actions become available in both project list and recent list: open folders externally and show folders in explorer. For multi-path projects, the action is applied to each path.
 
 ## Provided Service `project-list`
 
