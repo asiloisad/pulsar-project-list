@@ -28,15 +28,15 @@ The [recent-list](https://github.com/asiloisad/pulsar-recent-list) package exten
 
 You can edit a file by command `project-list:edit` or by manually opening `<config-dir>/projects.cson`. The main file structure consists of a array of objects.
 
-| Setting | Type | Description | Default |
-| --- | --- | --- | --- |
-| `title` | `string` | Project title used in the project list | *mandatory* |
-| `paths` | `string[]` | The array of paths to project directories. Glob wildcards (`*`, `**`, `?`, `[...]`, `{...}`) are supported and expand to all matching directories at load time. | *mandatory* |
-| `tags` | `string[]` | The tags help's organize and find projects | `[]` |
-| `scan` | `boolean\|string\|string[]` | scan paths and add subdirs as projects. A `true` is equal to `"*/"`. [More...](https://github.com/isaacs/node-glob?tab=readme-ov-file#glob-primer) | `false` |
-| `icon` | `string` | custom icon of project e.g. `"icon-star"` | `"icon-file-directory"` |
-| `devMode` | `boolean` | project should open in [Dev Mode](https://pulsar-edit.dev/docs/launch-manual/sections/core-hacking/#running-in-development-mode) | `false` |
-| `safeMode` | `boolean` | project should open in [Safe Mode](https://pulsar-edit.dev/docs/launch-manual/sections/core-hacking/#using-safe-mode) | `false` |
+| Setting    | Type                        | Description                                                                                                                                                     | Default                 |
+| ---------- | --------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------- |
+| `title`    | `string`                    | Project title used in the project list                                                                                                                          | _mandatory_             |
+| `paths`    | `string[]`                  | The array of paths to project directories. Glob wildcards (`*`, `**`, `?`, `[...]`, `{...}`) are supported and expand to all matching directories at load time. | _mandatory_             |
+| `tags`     | `string[]`                  | The tags help's organize and find projects                                                                                                                      | `[]`                    |
+| `scan`     | `boolean\|string\|string[]` | scan paths and add subdirs as projects. A `true` is equal to `"*/"`. [More...](https://github.com/isaacs/node-glob?tab=readme-ov-file#glob-primer)              | `false`                 |
+| `icon`     | `string`                    | custom icon of project e.g. `"icon-star"`                                                                                                                       | `"icon-file-directory"` |
+| `devMode`  | `boolean`                   | project should open in [Dev Mode](https://pulsar-edit.dev/docs/launch-manual/sections/core-hacking/#running-in-development-mode)                                | `false`                 |
+| `safeMode` | `boolean`                   | project should open in [Safe Mode](https://pulsar-edit.dev/docs/launch-manual/sections/core-hacking/#using-safe-mode)                                           | `false`                 |
 
 Here is an example of `projects.cson`:
 
