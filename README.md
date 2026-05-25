@@ -24,6 +24,27 @@ To install `project-list` search for [project-list](https://web.pulsar-edit.dev/
 
 The [recent-list](https://github.com/asiloisad/pulsar-recent-list) package extends the workflow with a recently opened projects list, fuzzy-searchable and sorted by recency.
 
+## Commands
+
+Commands available in `atom-workspace`:
+
+- `project-list:toggle`: opens project list,
+- `project-list:update`: update projects list,
+- `project-list:edit`: open configuration file.
+
+Commands available in `.project-list`:
+
+- `select-list:open`: opens a new window with selected project,
+- `select-list:swap`: closes active window and opens a new one with the selected project,
+- `select-list:switch`: switches to a new window with the selected project,
+- `select-list:append`: appends selected project to active window,
+- `select-list:paste`: paste paths into active text-editor,
+- `select-list:dev`: opens a new window with selected project in dev mode,
+- `select-list:safe`: opens a new window with selected project in safe mode,
+- `select-list:external`: open folders externally (via [open-external](https://github.com/asiloisad/pulsar-open-external)),
+- `select-list:show`: show folders in explorer (via [open-external](https://github.com/asiloisad/pulsar-open-external)),
+- `select-list:update`: update projects list.
+
 ## `projects.cson`
 
 You can edit a file by command `project-list:edit` or by manually opening `<config-dir>/projects.cson`. The main file structure consists of a array of objects.
@@ -88,27 +109,6 @@ Here is an example of `projects.cson`:
 ]
 ```
 
-## Commands
-
-Commands available in `atom-workspace`:
-
-- `project-list:toggle`: <kbd>F10</kbd> opens project list,
-- `project-list:update`: update projects list,
-- `project-list:edit`: <kbd>Ctrl+F10</kbd> open configuration file.
-
-Commands available in `.project-list`:
-
-- `select-list:open`: <kbd>Enter</kbd> opens a new window with selected project,
-- `select-list:swap`: <kbd>Alt+Enter</kbd> closes active window and opens a new one with the selected project,
-- `select-list:switch`: <kbd>Ctrl+Enter</kbd> switches to a new window with the selected project,
-- `select-list:append`: <kbd>Shift+Enter</kbd> appends selected project to active window,
-- `select-list:paste`: <kbd>Alt+V</kbd> paste paths into active text-editor,
-- `select-list:dev`: <kbd>Alt+D</kbd> opens a new window with selected project in dev mode,
-- `select-list:safe`: <kbd>Alt+S</kbd> opens a new window with selected project in safe mode,
-- `select-list:external`: <kbd>Alt+F12</kbd> open folders externally (via [open-external](https://github.com/asiloisad/pulsar-open-external)),
-- `select-list:show`: <kbd>Ctrl+F12</kbd> show folders in explorer (via [open-external](https://github.com/asiloisad/pulsar-open-external)),
-- `select-list:update`: <kbd>F5</kbd> update projects list.
-
 ## Filtering
 
 The search query is matched against a combined text string in the format `#tag1 #tag2 Title`. Tags are placed first so that a query like `"pulsar pack"` can match a tag `Pulsar` followed by a title `Packages` in the correct order.
@@ -126,7 +126,30 @@ When the [open-external](https://github.com/asiloisad/pulsar-open-external) pack
 
 ## Provided Service `project-list`
 
-Provides access to the project list manager instance. Other packages can use this to query and interact with the saved project list.
+Provides access to the project list manager instance. Other packages can use this to open the project list or query saved projects.
+
+In your `package.json`:
+
+```json
+{
+  "consumedServices": {
+    "project-list": {
+      "versions": { "1.0.0": "consumeProjectList" }
+    }
+  }
+}
+```
+
+In your main module:
+
+```javascript
+consumeProjectList(projectList) {
+  this.projectList = projectList;
+  return new Disposable(() => { this.projectList = null; });
+}
+```
+
+- `selectList.toggle()`: opens or closes the project list panel.
 
 ## Contributing
 
